@@ -48,10 +48,10 @@ app.get('/api', function api_index(req, res) {
     base_url: "https://github.com/relative-rene/express-personal-api", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/events", description: "data for all upcoming events"},
-      {method: "GET", path: "/api/events/:id", description: "data for specific upcoming events"},
-      {method: "POST", path: "/api/events", description: "creating new events"},
-      {method: "DELETE", path: "/api/events/:id", description: "canceling/removing specific events"},
+      {method: "GET", path: "/api/event", description: "data for all upcoming Event"},
+      {method: "GET", path: "/api/event/:id", description: "data for specific upcoming Event"},
+      {method: "POST", path: "/api/event", description: "creating new Event"},
+      {method: "DELETE", path: "/api/event/:id", description: "canceling/removing specific Event"},
       {method: "GET", path: "/api/profiles", description: "retrieve all profiles"},
       {method: "GET", path: "/api/profiles/:id", description: "retrieve specific profile"}]
     });
@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
 // get all profiles
 app.get('/api/profiles', function (req,res) {
   //send all profiles as json res
-  db.Events.find().populate('profiles').exec(function(err,profile){
+  db.Event.find().populate('profiles').exec(function(err,profile){
     if(err){ return console.log("index error: " +err);
   }
     res.json(profile);
@@ -81,27 +81,27 @@ app.get('/api/profiles/:id', function (req, res) {
 
 
 
-// get all events
+// get all Event
 app.get('/api/events', function (req,res) {
-  //send all events as json res
-  db.Events.find().populate('events').exec(function(err,Events){
+  //send all Event as json res
+  db.Event.find().populate('Event').exec(function(err,Event){
     if(err){ return console.log("index error: " +err);
   }
-    res.json(Events);
+    res.json(Event);
   });
 });
 
-// get one Events
+// get one Event
 app.get('/api/events/:id', function (req, res) {
-  db.Events.findOne({_id: req.params._id }, function(err, data) {
+  db.Event.findOne({_id: req.params._id }, function(err, data) {
     res.json(data);
   });
 });
 
-// create new Events
+// create new Event
 app.post('/api/events', function (req, res) {
   // create new book with form data (`req.body`)
-  var newEvents = new db.Events({
+  var newEvent = new db.Event({
     name: req.body.name,
     link: req.body.link,
     image: req.body.image,
@@ -109,32 +109,32 @@ app.post('/api/events', function (req, res) {
     pets: req.body.pets
   });
   // find the author from req.body
-  db.Events.findOne({name: req.body.Events}, function(err, Events){
+  db.Event.findOne({name: req.body.Event}, function(err, Event){
     if (err) {
       return console.log(err);
     }
     // add this author to the bookz
-    newEvents.Events = Events;
+    newEvent.Event = Event;
 
-    // save newEvents to database
-    newEvents.save(function(err, events){
+    // save newEvent to database
+    newEvent.save(function(err, Event){
       if (err) {
         return console.log("save error: " + err);
       }
-      console.log("saved ", Events.title);
-      // send back the Events!
-      res.json(events);
+      console.log("saved ", Event.title);
+      // send back the Event!
+      res.json(Event);
     });
   });
 });
 
-// delete Events
+// delete Event
 app.delete('/api/events/:id', function (req, res) {
-  // get Events id from url params (`req.params`)
-  console.log('Events delete', req.params);
-  var EventsId = req.params.id;
+  // get Event id from url params (`req.params`)
+  console.log('event delete', req.params);
+  var EventId = req.params.id;
   // find the index of the book we want to remove
-  db.Events.findOneAndRemove({ _id: EventsId }, function (err, deletedEvents) {
+  db.Event.findOneAndRemove({ _id: EventId }, function (err, deletedEvent) {
     res.json(deletedEvents);
   });
 });
