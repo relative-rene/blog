@@ -1,12 +1,14 @@
 console.log("Sanity Check: JS is working!");
-var Events =[], $eventList;
+var allEvents =[], $eventList=$('#eventList');
 $(document).ready(function(){
+submit();
+cancel();
+});
 
-$eventList = $('#eventList');
-
-$('#profileBuilder').on('submit',function(event){
+function submit(){
+$('#addEvent').on('submit',function(event){
   event.preventDefault();
-  console.log('new event serialized', $(this).serialize());
+  console.log('new event serialized', $(this).serializeArray());
   $.ajax({
     method: "POST",
     url:'/api/events/',
@@ -15,18 +17,18 @@ $('#profileBuilder').on('submit',function(event){
     error: newEventSuccess
   });
 });
-
-$eventList.on('click', '.deleteBtn', function() {
-    console.log('clicked Delete', '/api/events/'+$(this).attr('data-id'));
+}
+function cancel(){
+  $('#eventList').on('click', '.deleteBtn', function() {
+    console.log('clicked Delete', '/api/events/'+$(this).attr(req.body.id));
     $.ajax({
       method: 'DELETE',
-      url: '/api/events/'+$(this).attr('data-id'),
+      url: '/api/events/'+$(this).attr(req.body.id),
       success: deleteEventSuccess,
       error: deleteEventError
     });
-  });
 });
-
+}
 // helper function to render  posts to view
 // note: we empty and re-render the collection each time our post data changes
 function render () {
@@ -34,11 +36,11 @@ function render () {
   $eventList.empty();
 
   // append html to the view
-  $eventList.append("<li>"+req.body.Events+"</li>");
+  $eventList.append("<li>"+$(this)+"</li>");
 }
 
 function handleSuccess(json) {
-  allEvents = json;
+  var allEvents = json;
   render();
 }
 
