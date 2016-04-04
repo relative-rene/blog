@@ -1,22 +1,15 @@
 console.log("Sanity Check: JS is working!");
-var Events =[], $eventList,render();
+var Events =[], $eventList;
 $(document).ready(function(){
 
 $eventList = $('#eventList');
 
-$.ajax({
-  method: 'GET',
-  url: '/api/events',
-  success: handleSuccess,
-  error: handleError
-});
-
-$eventList.on('submit',function(event){
+$('#profileBuilder').on('submit',function(event){
   event.preventDefault();
-  console.log('new profile serialized', $(this).serialize());
+  console.log('new event serialized', $(this).serialize());
   $.ajax({
     method: "POST",
-    url:'/api/events',
+    url:'/api/events/',
     data: $(this).serializeArray(),
     success: newEventSuccess,
     error: newEventSuccess
@@ -60,7 +53,7 @@ function newEventSuccess(json) {
   render();
 }
 
-function deleteBookSuccess(json) {
+function deleteEventSuccess(json) {
   var event = json;
   console.log(json);
   var eventId = event._id;

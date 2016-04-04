@@ -48,14 +48,38 @@ app.get('/api', function api_index(req, res) {
     base_url: "https://github.com/relative-rene/express-personal-api", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/Events", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
-    ]
+      {method: "GET", path: "/api/events", description: "data for all upcoming events"},
+      {method: "GET", path: "/api/events/:id", description: "data for specific upcoming events"},
+      {method: "POST", path: "/api/events", description: "creating new events"},
+      {method: "DELETE", path: "/api/events/:id", description: "canceling/removing specific events"},
+      {method: "GET", path: "/api/profiles", description: "retrieve all profiles"},
+      {method: "GET", path: "/api/profiles/:id", description: "retrieve specific profile"}]
+    });
   });
-});
+
 app.get('/', function (req, res) {
   res.sendFile('views/index.html' , { root : __dirname});
 });
+
+
+// get all profiles
+app.get('/api/profiles', function (req,res) {
+  //send all profiles as json res
+  db.Events.find().populate('profiles').exec(function(err,profile){
+    if(err){ return console.log("index error: " +err);
+  }
+    res.json(profile);
+  });
+});
+
+// get one profiles
+app.get('/api/profiles/:id', function (req, res) {
+  db.Profile.findOne({_id: req.params._id }, function(err, data) {
+    res.json(data);
+  });
+});
+
+
 
 // get all events
 app.get('/api/events', function (req,res) {
@@ -64,15 +88,6 @@ app.get('/api/events', function (req,res) {
     if(err){ return console.log("index error: " +err);
   }
     res.json(Events);
-  });
-});
-
-// get all events
-app.get('/api/events', function (req, res) {
-  // send all books as JSON response
-  db.Events.find().populate('events').exec(function(err, Events) {
-      if (err) { return console.log("index error: " + err); }
-      res.json(Events);
   });
 });
 
@@ -102,13 +117,13 @@ app.post('/api/events', function (req, res) {
     newEvents.Events = Events;
 
     // save newEvents to database
-    newEvents.save(function(err, Events){
+    newEvents.save(function(err, events){
       if (err) {
         return console.log("save error: " + err);
       }
       console.log("saved ", Events.title);
       // send back the Events!
-      res.json(Events);
+      res.json(events);
     });
   });
 });
