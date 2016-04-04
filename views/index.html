@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blank</title>
+    <title>Where dogs meet</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -18,13 +18,35 @@
     <script src="/scripts/app.js"></script>
   </head>
   <body>
+  <h4><a href="/api">Read My API Documentation</a></h4>
+  <h1 class="text-center">Dog Lovers Unite</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>Under Construction</h1>
-          <h4><a href="/api">Read My API Documentation</a></h4>
-        </div>
-      </div>
-    </div>
-  </body>
+        <div class="col-md-3 col-md-offset-1 col-sm-3">
+            <form class="form-inline" id="profileBuilder">
+              <div class='profileInfo'>
+               <input type="text" class="form-control" name="name" placeholder='First and Last name'>
+               <input type="text" class="form-control" name="github_link" placeholder='github_link'>
+               <input type="text" class="form-control" name='current_city' placeholder='current_city'>
+               <input type="text" class="form-control" name='pets' placeholder='pet name'>
+               <input type="submit" value="Submit">
+             </div>
+           </form>
+           <br></br>
+           <form class="form-inline" id="addEvent">
+             <div class= "eventInfo">
+               <input type="text" class="form-control" name="goal" placeholder="Your hosting a...">
+               <input type="text" class="form-control" name="date" placeholder="Day of Event">
+               <input type="text" class="form-control" name="summary" placeholder="Anyting else...">
+               <input type="submit" value="Submit">
+            </div>
+           </form>
+         </div>
+       </div>
+     </div>
+<div id='#eventList'>
+  <ul></ul>
+  <button type="button" name="button" class='deleteBtn pullright'>Delete</button>
+</div>
+</body>
 </html>

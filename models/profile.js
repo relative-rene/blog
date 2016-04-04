@@ -1,6 +1,6 @@
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
-   Profile = require('./profiles');
+   Profile = require('./profile');
 
 
  var ProfileSchema = new Schema({

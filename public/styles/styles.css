@@ -1,10 +1,15 @@
 body {
-  color: #333;
+  color: #FFFFFF;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: skyblue; /* Sanity Check! */
+  background-image: url("http://i.imgur.com/fZrj9AU.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-h1 {
-  margin-top: 100px;
-  text-align: center;
+input[type=submit]{
+  background-color:green;
+  color: #FFFFFF;
+}
+.deleteBtn{
+  background-color: red;
+  color:#FFFFFF;
 }

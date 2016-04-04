@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
-  Pet = require('./pet');
+  Pets = require('./pets');
 
 
 var PetSchema = new Schema({
@@ -10,5 +10,5 @@ var PetSchema = new Schema({
     favoriteDogParks:[String],
     favoriteSnack: [String]
   });
-var Pet = mongoose.model('Pet', PetSchema);
-module.exports = Pet;
+var Pets = mongoose.model('Pet', PetSchema);
+module.exports = Pets;
