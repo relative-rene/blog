@@ -36,7 +36,7 @@ function render () {
   $eventList.empty();
 
   // append html to the view
-  $eventList.append("<li>"+$(this)+"</li>");
+  $eventList.append("<li>"+$('.eventInfo').val()+"</li>");
 }
 
 function handleSuccess(json) {
