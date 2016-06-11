@@ -10,5 +10,5 @@ var PetSchema = new Schema({
     favoriteDogParks:[String],
     favoriteSnack: [String]
   });
-var Pets = mongoose.model('Pet', PetSchema);
+var Pets = mongoose.model('Pets', PetSchema);
 module.exports = Pets;
