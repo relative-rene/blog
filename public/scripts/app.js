@@ -59,7 +59,7 @@ function deleteEventSuccess(json) {
   var event = json;
   console.log(json);
   var eventId = event._id;
-  console.log('Event deleted', eventId);
+  console.log('Events deleted', eventId);
   // find the event with the correct ID and remove it from our allEvents array
   for(var index = 0; index < allEvents.length; index++) {
     if(allEvents[index]._id === eventId) {
@@ -71,7 +71,7 @@ function deleteEventSuccess(json) {
 }
 
 function deleteEventError() {
-  console.log('Event canceling error');
+  console.log('Events canceling error');
 }
 
 function newEventSuccess(json) {
