@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
+  Events = require('./events');
 
 
 
@@ -8,5 +9,5 @@ var EventSchema = new Schema({
   DueDate: String,
   Summary: String
 });
-var Event = mongoose.model('Event', EventSchema);
-module.exports = Event;
+var Events = mongoose.model('Events', EventSchema);
+module.exports = Events;

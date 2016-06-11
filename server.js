@@ -48,10 +48,10 @@ app.get('/api', function api_index(req, res) {
     base_url: "https://github.com/relative-rene/express-personal-api", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/event", description: "data for all upcoming Event"},
-      {method: "GET", path: "/api/event/:id", description: "data for specific upcoming Event"},
-      {method: "POST", path: "/api/event", description: "creating new Event"},
-      {method: "DELETE", path: "/api/event/:id", description: "canceling/removing specific Event"},
+      {method: "GET", path: "/api/events", description: "data for all upcoming Event"},
+      {method: "GET", path: "/api/events/:id", description: "data for specific upcoming Event"},
+      {method: "POST", path: "/api/events", description: "creating new Event"},
+      {method: "DELETE", path: "/api/events/:id", description: "canceling/removing specific Event"},
       {method: "GET", path: "/api/profiles", description: "retrieve all profiles"},
       {method: "GET", path: "/api/profiles/:id", description: "retrieve specific profile"}]
     });
