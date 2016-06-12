@@ -5,5 +5,4 @@ mongoose.connect( process.env.MONGOLAB_URI ||
 
 module.exports.Profile = require('./profile.js');
 module.exports.Events = require('./events.js');
-module.exports.Pet = require('./pets.js');
 // module.exports.Campsite =cd require("./campsite.js.example");
