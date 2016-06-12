@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="blog">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +12,13 @@
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-route/angular-route.min.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/AlbumsIndexController.js"></script>
+    <script src="/scripts/controllers/AlbumsShowController.js"></script>
   </head>
   <body>
   <div class="heading">
@@ -27,9 +30,8 @@
           <li role="presentation"><a href="#">Messages</a></li>
         </ul>
   </div>
-
-  <div class="container">
-    <div class="summary">
+  <div class="summary">
+    <div class="container">
         <img class="summary-image img-suqare img-responsive pull-right" src="images/faceBookPic.jpg" alt="Attractive Developer">
         <h2 class="summary-heading">Origin<span class="text-muted"> The life and times of a dev</span>
         </h2>
@@ -56,5 +58,8 @@
       </footer>
     </div>
   </div>
+
+  <div ng-view></div>
+
 </body>
 </html>
