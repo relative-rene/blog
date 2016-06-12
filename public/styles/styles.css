@@ -1,17 +1,14 @@
-{
-    margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
-}
 
 .heading
 {
-    margin-top: 50px;
+    text-align: center;
     margin-bottom: 50px;
     border-radius: 6px;
+    padding-top: 50px
     padding-right: 60px;
     padding-left: 60px;
     background-color: #eee;
-    padding-top: 48px;
-    padding-bottom: 48px;
+
 }
 .summary
 {
