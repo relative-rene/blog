@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <form class="form-horizontal" ng-submit="eventsIndexCtrl.createEvent()">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>New Contribution</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Date</label>
+            <div class="col-md-4">
+            <input id="date" ng-model="eventsIndexCtrl.newEvent.date" type="text" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Topic</label>
+            <div class="col-md-4">
+            <input ng-model="eventsIndexCtrl.newEvent.topic" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Post</label>
+            <div class="col-md-4">
+              <textarea class="form-control" ng-model="eventsIndexCtrl.newEvent.post"></textarea>
+            </div>
+          </div>
+
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Save Contribution</label>
+            <div class="col-md-4">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
