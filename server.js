@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
  ************/
 
 // var db = require('./models');
-
+var controllers = require('./controllers');
 /**********
  * ROUTES *
  **********/
