@@ -5,7 +5,7 @@
 
  var ProfileSchema = new Schema({
      name: String,
-     link: String,
+     github_link: String,
      image: String,
      city: String,
      events: [Event.schema]
