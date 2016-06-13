@@ -1,6 +1,6 @@
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
-   Events = require('./events');
+   Event = require('./event');
 
 
  var ProfileSchema = new Schema({
