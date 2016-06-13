@@ -1,6 +1,6 @@
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
-   Profile = require('./profile');
+   Events = require('./events');
 
 
  var ProfileSchema = new Schema({
@@ -8,7 +8,7 @@
      link: String,
      image: String,
      city: String,
-     pets: [String]
+     events: [Event.schema]
  });
  var Profile = mongoose.model('Profile', ProfileSchema);
  module.exports = Profile;
