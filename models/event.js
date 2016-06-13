@@ -6,5 +6,5 @@ var EventSchema = new Schema({
   topic: String,
   post: String
 });
-var Events = mongoose.model('Events', EventSchema);
-module.exports = Events;
+
+module.exports = mongoose.model('Event', EventSchema);
