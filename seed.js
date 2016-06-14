@@ -3,6 +3,7 @@
 //
 var db = require('./models');
 
+
 // var new_campsite = {description: "Sharp rocks. Middle of nowhere."}
  var new_profile = {name: "Rene Arellano", github_link: "https://github.com/relative-rene", image: "/public/images/faceBookPic.jpg", city: "San Francisco"};
 
@@ -14,7 +15,7 @@ var db = require('./models');
 //    console.log("Created new campsite", campsite._id)
 //    process.exit(); // we're all done! Exit the program.
 //  })
-  db.Profile.create(new_profile, function(err, profle){
+  db.Profile.create(new_profile, function(err, profile){
     if (err){
       return console.log("Error:", err);
     }
