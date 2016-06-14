@@ -56,10 +56,10 @@ function update(req, res) {
 }
 // uncomment module.exprts once I have decided to allow multiple profiles
 
-// module.exports = {
-//  index: index,
-//  create: create,
-//  show: show,
-//  destroy: destroy,
-//  update: update
-// };
+ module.exports = {
+ index: index,
+ create: create,
+ show: show,
+ destroy: destroy,
+ update: update
+ };
