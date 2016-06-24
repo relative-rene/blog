@@ -53,6 +53,7 @@ app.delete('/api/profiles/:profileId', controllers.profiles.destroy);
 app.put('/api/profiles/:profileId', controllers.profiles.update);
 
 app.get('/api/profiles/:profileId/events', controllers.profilesEvents.index);
+app.get('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.show);
 app.post('/api/profiles/:profileId/events', controllers.profilesEvents.create);
 app.delete('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.destroy);
 app.put('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.update);

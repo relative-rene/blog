@@ -9,7 +9,7 @@ function ProfilesEventsIndexController ($http) {
 
  $http({
    method: 'GET',
-   url: '/api/profilesEvents'
+   url: '/api/profiles/'+ profile._id + '/events',
  }).then(function successCallback(response) {
    vm.profilesEvents = response.data;
  }, function errorCallback(response) {
@@ -19,7 +19,7 @@ function ProfilesEventsIndexController ($http) {
  vm.createProfile = function () {
    $http({
      method: 'POST',
-     url: '/api/profilesEvents',
+     url: '/api/profiles/'+ profile._id,
      data: vm.newProfile,
    }).then(function successCallback(response) {
      vm.profilesEvents.push(response.data);
