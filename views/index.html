@@ -12,13 +12,14 @@
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="/vendor/angular/angular.min.js"></script>
-    <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/ProfilesIndexController.js"></script>
     <script src="/scripts/controllers/ProfilesShowController.js"></script>
+    <script src="/templates/profiles-show.html"></script>
+    <script src="/templates/real_profiles.html"></script>
   </head>
   <body>
   <div class="heading">
@@ -48,13 +49,12 @@
           get a better understanding on what you don’t like to read. I only garantee
           honesty
         </p>
-      <footer>
-        <p>Copyright &copy; relative-rene 2016</p>
-      </footer>
     </div>
   </div>
 
   <div ng-view></div>
-
+  <footer>
+    <p>Copyright &copy; relative-rene 2016</p>
+  </footer>
 </body>
 </html>

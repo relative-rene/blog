@@ -1,6 +1,5 @@
 //Client-side JS front end routing for space
 
-
 angular
   .module('blog', ['ngRoute'])
   .config(config);
@@ -8,7 +7,7 @@ angular
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/profiles',
+      templateUrl: 'templates/real_profiles',
       controllerAs: 'profilesIndexCtrl',
       controller: 'ProfilesIndexController'
     })
