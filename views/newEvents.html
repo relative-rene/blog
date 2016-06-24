@@ -17,15 +17,15 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/ProfilesIndexController.js"></script>
-    <script src="/scripts/controllers/ProfilesShowController.js"></script>
+    <script src="/scripts/controllers/ProfilesEventsIndexController.js"></script>
+    <script src="/scripts/controllers/ProfilesEventsShowController.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
-          <form class="form-horizontal" ng-submit="eventsIndexCtrl.createEvent()">
+          <form class="form-horizontal" ng-submit="ProfilesEventsIndexCtrl.createEvent()">
             <fieldset>
 
               <!-- Form Name -->
@@ -35,7 +35,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Date</label>
                 <div class="col-md-4">
-                <input id="date" ng-model="eventsIndexCtrl.newEvent.date" type="text" class="form-control input-md" required="">
+                <input id="date" ng-model="ProfilesEventsIndexCtrl.newEvent.date" type="text" class="form-control input-md" required="">
                 </div>
               </div>
 
@@ -43,7 +43,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Topic</label>
                 <div class="col-md-4">
-                <input ng-model="eventsIndexCtrl.newEvent.topic" type="text" class="form-control input-md">
+                <input ng-model="ProfilesEventsIndexCtrl.newEvent.topic" type="text" class="form-control input-md">
                 </div>
               </div>
 
@@ -51,7 +51,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Post</label>
                 <div class="col-md-4">
-                  <textarea class="form-control" ng-model="eventsIndexCtrl.newEvent.post"></textarea>
+                  <textarea class="form-control" ng-model="ProfilesEventsIndexCtrl.newEvent.post"></textarea>
                 </div>
               </div>
 
@@ -68,5 +68,59 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+          <form class="form-horizontal" ng-submit="profilesIndexCtrl.createProfile()">
+            <fieldset>
+
+              <!-- Form Name -->
+              <legend>Add New Profile</legend>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Name</label>
+                <div class="col-md-4">
+                <input id="name" ng-model="profilesIndexCtrl.newProfile.name" type="text" class="form-control input-md" required="">
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">GitHub Link</label>
+                <div class="col-md-4">
+                <input ng-model="profilesIndexCtrl.newProfile.github_link" type="text" class="form-control input-md">
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">City</label>
+                <div class="col-md-4">
+                <input ng-model="profilesIndexCtrl.newProfile.city" type="text" class="form-control input-md">
+                </div>
+              </div>
+
+              <!-- Textarea -->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Events</label>
+                <div class="col-md-4">
+                  <textarea class="form-control" ng-model="profilesIndexCtrl.newProfile.events"></textarea>
+                </div>
+              </div>
+
+
+              <!-- Button -->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Save Profile</label>
+                <div class="col-md-4">
+                  <button class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
   </body>
 </html>

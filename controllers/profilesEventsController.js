@@ -9,6 +9,15 @@ function index(req, res) {
   });
 }
 
+function show(req, res) {
+  db.Profile.findById(req.params.profileId, function(err, foundProfile) {
+    if(err) { console.log('profileController.show error', err); }
+    console.log('profileController.show responding with', foundProfile);
+    res.json(foundProfile);
+  });
+}
+
+
 // app.post ('/api/profile/:profileId/events', controllers.profileEvents.create);
 function create(req, res) {
   db.Profile.findById(req.params.profileId, function(err, foundProfile) {
@@ -66,6 +75,7 @@ function update(req, res) {
 
 module.exports = {
   index: index,
+  show: show,
   create: create,
   update: update,
   destroy: destroy

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <form class="form-horizontal" ng-submit="profilesIndexCtrl.createProfile()">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Add New Profile</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Name</label>
+            <div class="col-md-4">
+            <input id="name" ng-model="profilesIndexCtrl.newProfile.name" type="text" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">GitHub Link</label>
+            <div class="col-md-4">
+            <input ng-model="profilesIndexCtrl.newProfile.github_link" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">City</label>
+            <div class="col-md-4">
+            <input ng-model="profilesIndexCtrl.newProfile.city" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Events</label>
+            <div class="col-md-4">
+              <textarea class="form-control" ng-model="profilesIndexCtrl.newProfile.events"></textarea>
+            </div>
+          </div>
+
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Save Profile</label>
+            <div class="col-md-4">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
