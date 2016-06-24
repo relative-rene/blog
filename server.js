@@ -19,7 +19,9 @@ app.use(function(req, res, next) {
 /************
  * DATABASE *
  ************/
-
+ var ejs = require('ejs');
+ app.engine('html', ejs.renderFile);
+ app.set('view engine', 'html');
 // var db = require('./models');
 var controllers = require('./controllers');
 /**********
