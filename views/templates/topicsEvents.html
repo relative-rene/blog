@@ -1,6 +1,6 @@
 <div class="container">
   <input type="text" class="form-control" ng-model="searchText" placeholder="Search Blogs">
-  <div ng-repeat="event in profilesIndexCtrl.events | orderBy: 'date' | filter: searchText" class="row">
+  <div ng-repeat="event in topicsIndexCtrl.events | orderBy: 'date' | filter: searchText" class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-body">
@@ -36,9 +36,9 @@
 
         <!--   <div class='panel-footer'> uncomment when edits need to happen
             <div class='panel-footer'>
-              <button class='btn btn-danger' ng-click="profilesIndexCtrl.deleteEvent(profile)">Delete Event</button>
+              <button class='btn btn-danger' ng-click="topicsIndexCtrl.deleteEvent(topic)">Delete Event</button>
               <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Event</button>
-              <button class='btn btn-success' ng-show="editing" ng-click="eventsIndexCtrl.editEvent(profile); editing = false">Save Changes</button>
+              <button class='btn btn-success' ng-show="editing" ng-click="eventsIndexCtrl.editEvent(topic); editing = false">Save Changes</button>
             </div>
           </div> -->
         </div>

@@ -7,24 +7,24 @@ angular
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/profiles',
-      controllerAs: 'profilesIndexCtrl',
-      controller: 'ProfilesIndexController'
+      templateUrl: 'templates/topics',
+      controllerAs: 'topicsIndexCtrl',
+      controller: 'TopicsIndexController'
     })
     .when('/:id', {
-      templateUrl: 'templates/profiles_show',
-      controllerAs: 'profilesShowCtrl',
-      controller: 'ProfilesShowController'
+      templateUrl: 'templates/topics_show',
+      controllerAs: 'topicsShowCtrl',
+      controller: 'TopicsShowController'
     })
     .when('/events', {
-      templateUrl: 'templates/profileBlogs',
-      controllerAs: 'profilesEventsIndexCtrl',
-      controller: 'ProfilesEventsIndexController'
+      templateUrl: 'templates/topicBlogs',
+      controllerAs: 'topicsEventsIndexCtrl',
+      controller: 'TopicsEventsIndexController'
     })
     .when('/events/:id', {
-      templateUrl: 'templates/profileBlog',
-      controllerAs: 'profilesEventsShowCtrl',
-      controller: 'ProfilesEventsShowController'
+      templateUrl: 'templates/topicBlog',
+      controllerAs: 'topicsEventsShowCtrl',
+      controller: 'TopicsEventsShowController'
     });
 
     $locationProvider.html5Mode({

@@ -1,18 +1,18 @@
 angular
   .module('blog')
-  .controller('ProfilesShowController', ProfilesShowController);
+  .controller('TopicsShowController', TopicsShowController);
 
-ProfilesShowController.$inject = ['$http', '$routeParams'];
+TopicsShowController.$inject = ['$http', '$routeParams'];
 
-function ProfilesShowController ($http, $routeParams) {
+function TopicsShowController ($http, $routeParams) {
   var vm = this;
   vm.newEvent = {};
 
   $http({
     method: 'GET',
-    url: '/api/profiles/'+$routeParams.id
+    url: '/api/topics/'+$routeParams.id
   }).then(function successCallback(json) {
-    vm.profile = json.data;
+    vm.topic = json.data;
     vm.github_link = json.data.github_link;
     console.log(json.data);
   }, function errorCallback(response) {
@@ -23,10 +23,10 @@ function ProfilesShowController ($http, $routeParams) {
     console.log(event);
     $http({
       method: "POST",
-      url: '/api/profiles/'+$routeParams.id+'/events/',
+      url: '/api/topics/'+$routeParams.id+'/events/',
       data: vm.newEvent
     }).then(function successCallback (response) {
-      vm.profile.events.push(response.data);
+      vm.topic.events.push(response.data);
     }, function errorCallback (response) {
       console.log('There was an error posting the data', response);
     });
@@ -36,7 +36,7 @@ function ProfilesShowController ($http, $routeParams) {
     console.log(event);
     $http({
       method:'DELETE',
-      url: '/api/profiles/'+routeParams.id+'/events/'
+      url: '/api/topics/'+routeParams.id+'/events/'
     });
   };
 }

@@ -3,12 +3,12 @@
    Event = require('./event');
 
 
- var ProfileSchema = new Schema({
+ var TopicSchema = new Schema({
      name: String,
      github_link: String,
      image: String,
      city: String,
      events: [Event.schema]
  });
- var Profile = mongoose.model('Profile', ProfileSchema);
- module.exports = Profile;
+ var Topic = mongoose.model('Topic', TopicSchema);
+ module.exports = Topic;
