@@ -1,38 +1,38 @@
 angular
  .module('blog')
- .controller('ProfilesEventsIndexController', ProfilesEventsIndexController);
+ .controller('TopicsEventsIndexController', TopicsEventsIndexController);
 
-ProfilesEventsIndexController.$inject = ['$http'];
-function ProfilesEventsIndexController ($http) {
+TopicsEventsIndexController.$inject = ['$http'];
+function TopicsEventsIndexController ($http) {
  var vm = this;
- vm.newProfile = {};
+ vm.newTopic = {};
 
  $http({
    method: 'GET',
-   url: '/api/profiles/'+ profile._id + '/events',
+   url: '/api/topics/'+ topic._id + '/events',
  }).then(function successCallback(response) {
-   vm.profilesEvents = response.data;
+   vm.topicsEvents = response.data;
  }, function errorCallback(response) {
    console.log('There was an error getting the data', response);
  });
 
- vm.createProfile = function () {
+ vm.createTopic = function () {
    $http({
      method: 'POST',
-     url: '/api/profiles/'+ profile._id,
-     data: vm.newProfile,
+     url: '/api/topics/'+ topic._id,
+     data: vm.newTopic,
    }).then(function successCallback(response) {
-     vm.profilesEvents.push(response.data);
+     vm.topicsEvents.push(response.data);
    }, function errorCallback(response) {
      console.log('There was an error posting the data', response);
    });
  };
 
- vm.editProfile = function (profile) {
+ vm.editTopic = function (topic) {
    $http({
      method: 'PUT',
-     url: '/api/profilesEvents/'+profile._id,
-     data: profile
+     url: '/api/topicsEvents/'+topic._id,
+     data: topic
    }).then(function successCallback(json) {
      // don't need to do anything!
    }, function errorCallback(response) {
@@ -40,13 +40,13 @@ function ProfilesEventsIndexController ($http) {
    });
  };
 
- vm.deleteProfile = function (profile) {
+ vm.deleteTopic = function (topic) {
    $http({
      method: 'DELETE',
-     url: '/api/profilesEvents/'+ profile._id
+     url: '/api/topicsEvents/'+ topic._id
    }).then(function successCallback(json) {
-     var index = vm.profilesEvents.indexOf(profile);
-     vm.profilesEvents.splice(index,1);
+     var index = vm.topicsEvents.indexOf(topic);
+     vm.topicsEvents.splice(index,1);
    }, function errorCallback(response) {
      console.log('There was an error deleting the data', response);
    });

@@ -1,3 +1,3 @@
 module.exports.api = require('./apiController');
-module.exports.profiles = require('./profilesController');
-module.exports.profilesEvents = require('./profilesEventsController');
+module.exports.topics = require('./topicsController');
+module.exports.topicsEvents = require('./topicsEventsController');

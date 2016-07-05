@@ -17,15 +17,15 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/ProfilesEventsIndexController.js"></script>
-    <script src="/scripts/controllers/ProfilesEventsShowController.js"></script>
+    <script src="/scripts/controllers/TopicsEventsIndexController.js"></script>
+    <script src="/scripts/controllers/TopicsEventsShowController.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
-          <form class="form-horizontal" ng-submit="ProfilesEventsIndexCtrl.createEvent()">
+          <form class="form-horizontal" ng-submit="TopicsEventsIndexCtrl.createEvent()">
             <fieldset>
 
               <!-- Form Name -->
@@ -35,7 +35,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Date</label>
                 <div class="col-md-4">
-                <input id="date" ng-model="ProfilesEventsIndexCtrl.newEvent.date" type="text" class="form-control input-md" required="">
+                <input id="date" ng-model="TopicsEventsIndexCtrl.newEvent.date" type="text" class="form-control input-md" required="">
                 </div>
               </div>
 
@@ -43,7 +43,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Topic</label>
                 <div class="col-md-4">
-                <input ng-model="ProfilesEventsIndexCtrl.newEvent.topic" type="text" class="form-control input-md">
+                <input ng-model="TopicsEventsIndexCtrl.newEvent.topic" type="text" class="form-control input-md">
                 </div>
               </div>
 
@@ -51,7 +51,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Post</label>
                 <div class="col-md-4">
-                  <textarea class="form-control" ng-model="ProfilesEventsIndexCtrl.newEvent.post"></textarea>
+                  <textarea class="form-control" ng-model="TopicsEventsIndexCtrl.newEvent.post"></textarea>
                 </div>
               </div>
 
@@ -72,17 +72,17 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
-          <form class="form-horizontal" ng-submit="profilesIndexCtrl.createProfile()">
+          <form class="form-horizontal" ng-submit="topicsIndexCtrl.createTopic()">
             <fieldset>
 
               <!-- Form Name -->
-              <legend>Add New Profile</legend>
+              <legend>Add New Topic</legend>
 
               <!-- Text input-->
               <div class="form-group">
                 <label class="col-md-4 control-label">Name</label>
                 <div class="col-md-4">
-                <input id="name" ng-model="profilesIndexCtrl.newProfile.name" type="text" class="form-control input-md" required="">
+                <input id="name" ng-model="topicsIndexCtrl.newTopic.name" type="text" class="form-control input-md" required="">
                 </div>
               </div>
 
@@ -90,7 +90,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">GitHub Link</label>
                 <div class="col-md-4">
-                <input ng-model="profilesIndexCtrl.newProfile.github_link" type="text" class="form-control input-md">
+                <input ng-model="topicsIndexCtrl.newTopic.github_link" type="text" class="form-control input-md">
                 </div>
               </div>
 
@@ -98,7 +98,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">City</label>
                 <div class="col-md-4">
-                <input ng-model="profilesIndexCtrl.newProfile.city" type="text" class="form-control input-md">
+                <input ng-model="topicsIndexCtrl.newTopic.city" type="text" class="form-control input-md">
                 </div>
               </div>
 
@@ -106,14 +106,14 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Events</label>
                 <div class="col-md-4">
-                  <textarea class="form-control" ng-model="profilesIndexCtrl.newProfile.events"></textarea>
+                  <textarea class="form-control" ng-model="topicsIndexCtrl.newTopic.events"></textarea>
                 </div>
               </div>
 
 
               <!-- Button -->
               <div class="form-group">
-                <label class="col-md-4 control-label">Save Profile</label>
+                <label class="col-md-4 control-label">Save Topic</label>
                 <div class="col-md-4">
                   <button class="btn btn-primary">Submit</button>
                 </div>

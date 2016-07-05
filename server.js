@@ -46,17 +46,17 @@ app.get('/newEvents', function (req, res) {
  */
  app.get('/api', controllers.api.index);
 
-app.get('/api/profiles', controllers.profiles.index);
-app.get('/api/profiles/:profileId', controllers.profiles.show);
-app.post('/api/profiles', controllers.profiles.create);
-app.delete('/api/profiles/:profileId', controllers.profiles.destroy);
-app.put('/api/profiles/:profileId', controllers.profiles.update);
+app.get('/api/topics', controllers.topics.index);
+app.get('/api/topics/:topicId', controllers.topics.show);
+app.post('/api/topics', controllers.topics.create);
+app.delete('/api/topics/:topicId', controllers.topics.destroy);
+app.put('/api/topics/:topicId', controllers.topics.update);
 
-app.get('/api/profiles/:profileId/events', controllers.profilesEvents.index);
-app.get('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.show);
-app.post('/api/profiles/:profileId/events', controllers.profilesEvents.create);
-app.delete('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.destroy);
-app.put('/api/profiles/:profileId/events/:eventId', controllers.profilesEvents.update);
+app.get('/api/topics/:topicId/events', controllers.topicsEvents.index);
+app.get('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.show);
+app.post('/api/topics/:topicId/events', controllers.topicsEvents.create);
+app.delete('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.destroy);
+app.put('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.update);
 
 app.get('/templates/:name', controllers.api.templates);
 

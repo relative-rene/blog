@@ -3,11 +3,11 @@ function index(req, res) {
     base_url: "https://github.com/relative-rene/express-personal-api", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profiles", description: "splash page SPA"},
-      {method: "GET", path: "/api/profiles/:eventsId", description: "show specific blog post"},
-      {method: "POST", path: "/api/profiles/events", description: "creating new blog post"},
-      {method: "DELETE", path: "/api/profiles/:eventId", description: "canceling/removing specific Blog"},
-      {method: "PUT", path: "/api/profiles/:eventId", description: "edit specific blog post"}
+      {method: "GET", path: "/api/topics", description: "splash page SPA"},
+      {method: "GET", path: "/api/topics/:eventsId", description: "show specific blog post"},
+      {method: "POST", path: "/api/topics/events", description: "creating new blog post"},
+      {method: "DELETE", path: "/api/topics/:eventId", description: "canceling/removing specific Blog"},
+      {method: "PUT", path: "/api/topics/:eventId", description: "edit specific blog post"}
 ]
   });
 }
