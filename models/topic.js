@@ -5,9 +5,8 @@
 
  var TopicSchema = new Schema({
      name: String,
-     github_link: String,
-     image: String,
-     city: String,
+     date: String,
+     description: String,
      events: [Event.schema]
  });
  var Topic = mongoose.model('Topic', TopicSchema);

@@ -17,8 +17,14 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/TopicsEventsIndexController.js"></script>
+    <script src="/scripts/controllers/TopicsIndexController.js"></script>
+    <script src="/scripts/controllers/TopicsShowController.js"></script>
     <script src="/scripts/controllers/TopicsEventsShowController.js"></script>
+    <script src="/scripts/controllers/TopicsEventsIndexController.js"></script>
+    <script src="/templates/newTopics.html"></script>
+    <script src="/templates/topics_show.html"></script>
+    <script src="/templates/topicsEvents_show.html"></script>
+    <script src="/templates/topicsEvents.html"></script>
   </head>
   <body>
     <div class="container">
@@ -68,6 +74,7 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -80,25 +87,25 @@
 
               <!-- Text input-->
               <div class="form-group">
-                <label class="col-md-4 control-label">Name</label>
+                <label class="col-md-4 control-label">Name: </label>
                 <div class="col-md-4">
-                <input id="name" ng-model="topicsIndexCtrl.newTopic.name" type="text" class="form-control input-md" required="">
+                  <input id="name" ng-model="topicsIndexCtrl.newTopic.name" type="text" class="form-control input-md" required="">
                 </div>
               </div>
 
               <!-- Text input-->
               <div class="form-group">
-                <label class="col-md-4 control-label">GitHub Link</label>
+                <label class="col-md-4 control-label">Date: </label>
                 <div class="col-md-4">
-                <input ng-model="topicsIndexCtrl.newTopic.github_link" type="text" class="form-control input-md">
+                  <input ng-model="topicsIndexCtrl.newTopic.date" type="text" class="form-control input-md">
                 </div>
               </div>
 
               <!-- Text input-->
               <div class="form-group">
-                <label class="col-md-4 control-label">City</label>
+                <label class="col-md-4 control-label">Description: </label>
                 <div class="col-md-4">
-                <input ng-model="topicsIndexCtrl.newTopic.city" type="text" class="form-control input-md">
+                <input ng-model="topicsIndexCtrl.newTopic.description" type="text" class="form-control input-md">
                 </div>
               </div>
 
