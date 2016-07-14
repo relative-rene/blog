@@ -17,7 +17,7 @@ function config ($routeProvider, $locationProvider) {
       controller: 'TopicsShowController'
     })
     .when('/events', {
-      templateUrl: 'templates/topicEvents',
+      templateUrl: 'templates/topicsEvents',
       controllerAs: 'topicsEventsIndexCtrl',
       controller: 'TopicsEventsIndexController'
     })
