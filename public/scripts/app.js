@@ -17,12 +17,12 @@ function config ($routeProvider, $locationProvider) {
       controller: 'TopicsShowController'
     })
     .when('/events', {
-      templateUrl: 'templates/topicBlogs',
+      templateUrl: 'templates/topicEvents',
       controllerAs: 'topicsEventsIndexCtrl',
       controller: 'TopicsEventsIndexController'
     })
     .when('/events/:id', {
-      templateUrl: 'templates/topicBlog',
+      templateUrl: 'templates/topicsEvents_show',
       controllerAs: 'topicsEventsShowCtrl',
       controller: 'TopicsEventsShowController'
     });
