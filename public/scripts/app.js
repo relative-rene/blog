@@ -6,7 +6,7 @@ angular
 
 function config ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/', {
+    .when('/newEvents', {
       templateUrl: 'templates/topics',
       controllerAs: 'topicsIndexCtrl',
       controller: 'TopicsIndexController'
