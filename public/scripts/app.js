@@ -1,9 +1,13 @@
 //Client-side JS front end routing for space
+$(function(){
+  console.log('app.js loaded');
+});
 
 angular
   .module('blog', ['ngRoute'])
   .config(config);
 
+config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/newEvents', {
