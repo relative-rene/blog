@@ -6,7 +6,7 @@ TopicsIndexController.$inject = ['$http'];
 function TopicsIndexController ($http) {
  var vm = this;
  vm.newTopic = {};
-
+ console.log("in the topics index controller");
  $http({
    method: 'GET',
    url: '/api/topics'
