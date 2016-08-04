@@ -29,7 +29,7 @@ p
 div.img
 {
 border-style: ridge;
-display: block;
+/*display: block;*/
 position: relative;
 }
 .summary-heading
