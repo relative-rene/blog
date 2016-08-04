@@ -1,9 +1,9 @@
 {
   "name": "express_self_api",
-  "description": "Build an API about yourself",
+  "description": "Blog about lessons in becoming a developer",
   "main": "server.js",
   "authors": [
-    "WDI 25"
+    "relative-rene"
   ],
   "license": "ISC",
   "homepage": "https://github.com/relative-rene/express-personal-api",
