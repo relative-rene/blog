@@ -1,4 +1,6 @@
-This app originated as a weekend project to build a personal api using MongoDB, Express and Node.js.  Once I acquired some Angular skills, I decided to grow my knowledge base by refactoring to a MEAN stack a blog.
+This app originated as a weekend project to build a personal api using MongoDB, Express and Node.js.  Once I acquired some Angular skills, I decided to grow my knowledge base by refactoring to a MEAN stack blog.
+#<img width="932" alt="screen shot 2016-08-04 at 3 40 50 pm" src="https://cloud.githubusercontent.com/assets/12709735/17420799/f715596c-5a59-11e6-8c57-e3f1cb5913cc.png"> Lessons from a Dev
+
 
 
 
