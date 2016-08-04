@@ -17,6 +17,7 @@ function TopicsEventsIndexController ($http) {
  });
 
  vm.createTopic = function () {
+   console.log("clicked create topic");
    $http({
      method: 'POST',
      url: '/api/topics/'+ topic._id,

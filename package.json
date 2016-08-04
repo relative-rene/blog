@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/SF-WDI-LABS/express_self_api.git"
   },
-  "author": "WDI 25",
+  "author": "relative-rene",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SF-WDI-LABS/express_self_api/issues"
@@ -21,8 +21,5 @@
     "express": "^4.13.4",
     "mongoose": "^4.4.10",
     "ejs": "^2.4.1"
-  },
-  "engines": {
-    "node": "5.8.0"
   }
 }

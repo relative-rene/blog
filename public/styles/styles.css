@@ -1,4 +1,11 @@
-
+h1
+{
+  color: #C57D31;
+}
+p
+{
+  color: #bababa;
+}
 .heading
 {
     text-align: center;
@@ -7,24 +14,38 @@
     padding-top: 50px
     padding-right: 60px;
     padding-left: 60px;
-    background-color: #eee;
-
 }
-.summary
+.summary-image
 {
-    overflow: hidden;
+  border-style: ridge;
 }
-
-.summary-image.pull-right
+.lead
 {
-    margin-left: 40px;
+  padding: 10px;
+  background-color: #878787;
+  border-style: ridge;
 }
 
+div.img
+{
+border-style: ridge;
+/*display: block;*/
+position: relative;
+}
 .summary-heading
 {
-    font-size: 50px;
+  font-size: 50px;
 }
+#bg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -10;
 
+}
 footer
 {
     margin: 50px 0;
