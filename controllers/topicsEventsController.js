@@ -48,7 +48,6 @@ function destroy(req, res) {
       res.send(404);
     }
   });
-
 }
 
 //app.put('/api/topic/:topicId/events/:eventId', controllers.topicEvents.update);
@@ -69,7 +68,6 @@ function update(req, res) {
       res.send(404);
     }
   });
-
 }
 
 

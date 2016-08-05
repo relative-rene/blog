@@ -52,9 +52,7 @@ function update(req, res) {
       res.json(savedTopic);
     });
   });
-
 }
-// uncomment module.exprts once I have decided to allow multiple topics
 
  module.exports = {
  index: index,
