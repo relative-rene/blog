@@ -1,10 +1,13 @@
 // SERVER-SIDE JAVASCRIPT
 
+// Modules and Configuration ////
+
 //require express in our app
-var express = require('express');
-// generate a new express app and call it 'app'
-var app = express();
-var bodyParser = require('body-parser');
+var express = require('express'),
+  app = express(),
+  bodyParser = require('body-parser'),
+  controllers = require('./controllers');
+
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
@@ -21,7 +24,6 @@ var ejs = require('ejs');
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
-var controllers = require('./controllers');
 
 
 /**********
@@ -41,26 +43,17 @@ app.get('/', function homepage(req, res) {
 //   res.sendFile(__dirname + '/views/newEvents.html');
 // });
 
-/*
- * JSON API Endpoints
- */
- app.get('/api', controllers.api.index);
+// JSON API Endpoints
 
-app.get('/api/topics', controllers.topics.index);
-app.get('/api/topics/:topicId', controllers.topics.show);
-app.post('/api/topics', controllers.topics.create);
-app.delete('/api/topics/:topicId', controllers.topics.destroy);
-app.put('/api/topics/:topicId', controllers.topics.update);
+// API Controller
+app.get('/api', controllers.api.index);
 
-app.get('/api/topics/:topicId/events', controllers.topicsEvents.index);
-app.get('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.show);
-app.post('/api/topics/:topicId/events', controllers.topicsEvents.create);
-app.delete('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.destroy);
-app.put('/api/topics/:topicId/events/:eventId', controllers.topicsEvents.update);
+app.get('/api/posts', controllers.posts.index);
+app.post('/api/posts', controllers.posts.create);
+app.get('/api/posts/:Id', controllers.posts.show);
+app.delete('/api/posts/:Id', controllers.posts.destroy);
+app.put('/api/posts/:Id', controllers.posts.update);
 
-app.get('/templates/:name', controllers.api.templates);
-
- // ALL OTHER ROUTES (ANGULAR HANDLES)
  // redirect all other paths to index
  app.get('*', function homepage (req, res) {
    res.sendFile(__dirname + '/views/index.html');
