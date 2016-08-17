@@ -10,26 +10,34 @@ angular
 config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/newEvents', {
-      templateUrl: 'templates/topics',
-      controllerAs: 'topicsIndexCtrl',
-      controller: 'TopicsIndexController'
+    .when('/', {
+      templateUrl: 'templates/main/index.html',
+      controllerAs: 'postIndexCtrl',
+      controller: 'PostIndexController'
     })
-    .when('/:id', {
-      templateUrl: 'templates/topics_show',
-      controllerAs: 'topicsShowCtrl',
-      controller: 'TopicsShowController'
+    // Routes to POST //
+    .when('/posts', {
+      templateUrl: 'templates/main/index.html',
+      controllerAs: 'postIndexCtrl',
+      controller: 'PostIndexController'
     })
-    .when('/events', {
-      templateUrl: 'templates/topicsEvents',
-      controllerAs: 'topicsEventsIndexCtrl',
-      controller: 'TopicsEventsIndexController'
+    .when('/posts/new', {
+      templateUrl: 'templates/posts/new.html',
+      controllerAs: 'postsNewCtrl',
+      controller: 'PostsNewController'
     })
-    .when('/events/:id', {
-      templateUrl: 'templates/topicsEvents_show',
-      controllerAs: 'topicsEventsShowCtrl',
-      controller: 'TopicsEventsShowController'
-    });
+    .when('/posts/:id', {
+      templateUrl: 'templates/posts/show.html',
+      controllerAs: 'postsShowCtrl',
+      controller: 'PostsShowController'
+    })
+    .when('/posts/:id/edit', {
+      templateUrl: 'templates/posts/edit.html',
+      controllerAs: 'postsEditCtrl',
+      controller: 'PostsEditController'
+    })
+    .otherwise({redirectTo: '/'});
+
 
     $locationProvider.html5Mode({
       enabled: true,
