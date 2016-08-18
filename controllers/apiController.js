@@ -5,11 +5,11 @@ function index(req, res) {
     base_url: "http://brainchilddeveloper.herokuapp.com/",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/topics", description: "splash page SPA"},
-      {method: "GET", path: "/api/topics/:eventsId", description: "show specific blog post"},
-      {method: "POST", path: "/api/topics/events", description: "creating new blog post"},
-      {method: "DELETE", path: "/api/topics/:eventId", description: "canceling/removing specific Blog"},
-      {method: "PUT", path: "/api/topics/:eventId", description: "edit specific blog post"}
+      {method: "GET", path: "/api/posts", description: "Main Page, get all posts"},
+      {method: "POST", path: "/api/posts", description: "creating new post"},
+      {method: "GET", path: "/api/posts/:id", description: "show specific blog post"},
+      {method: "DELETE", path: "/api/posts/:Id", description: "Destroy/remove specific posts"},
+      {method: "PUT", path: "/api/posts/:Id", description: "Update specific posts"}
     ]
   });
 }
