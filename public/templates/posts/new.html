@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <form class="form-horizontal" ng-submit="topicsIndexCtrl.createTopic()">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Add New Topic</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Name: </label>
+            <div class="col-md-4">
+              <input id="name" ng-model="topicsIndexCtrl.newTopic.name" type="text" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Date: </label>
+            <div class="col-md-4">
+              <input ng-model="topicsIndexCtrl.newTopic.date" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Description: </label>
+            <div class="col-md-4">
+            <input ng-model="topicsIndexCtrl.newTopic.description" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Events</label>
+            <div class="col-md-4">
+              <textarea class="form-control" ng-model="topicsIndexCtrl.newTopic.events"></textarea>
+            </div>
+          </div>
+
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Save Topic</label>
+            <div class="col-md-4">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
