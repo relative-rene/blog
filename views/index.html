@@ -8,25 +8,29 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="/vendor/angular/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
-    <!-- APPLICATION SCRIPTS -->
-    <script src="/scripts/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+
+        <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/controllers/posts-index.controller.js"></script>
     <script src="/scripts/controllers/posts-new.controller.js"></script>
     <script src="/scripts/controllers/posts-show.controller.js"></script>
     <script src="/scripts/controllers/posts-edit.controller.js"></script>
+    <script src="/scripts/routes.js"></script>
+    <script src="/scripts/app.js"></script>
 
   </head>
   <body>
 
   <div ng-view></div>
-  <footer>
-    <p>Copyright &copy; relative-rene 2016</p>
-  </footer>
+
+    <footer>
+      <p>Copyright &copy; relative-rene 2016</p>
+    </footer>
+
 </body>
 </html>
