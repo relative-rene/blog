@@ -1,16 +1,10 @@
-angular
-  .module('blog')
-  .controller('PostsNewController', PostsNewController);
-
   PostsNewController.$inject = ["$location"];
   function PostsNewController ($location,$http) {
     var vm = this;
-    vm.create = createPost;
-    vm.post = {};
+    vm.posts = {};
 
 //  app.get('/api/posts, controllers.posts.create);
-
-  vm.create = function () {
+  create = function () {
     $http({
       method: 'POST',
       url: '/api/posts/:id',

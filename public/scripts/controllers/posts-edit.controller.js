@@ -1,13 +1,10 @@
-angular
-  .module('blog')
-  .controller('PostsEditController', PostsEditController);
-
-  PostsIndexController.$inject = ['$http'];
-  function PostsIndexController ($http) {
+  PostsEditController.$inject = ['$http'];
+  
+  function PostsEditController ($http) {
     var vm = this;
     vm.post = {};
 
-  vm.edit = function (post) {
+  edit = function (post) {
     $http({
       method: 'PUT',
       url: '/api/posts/'+post._id,

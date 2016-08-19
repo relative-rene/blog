@@ -1,7 +1,3 @@
-angular
-  .module('blog')
-  .controller('PostsShowController', PostsShowController);
-
 PostsIndexController.$inject = ['$http'];
 function PostsShowController ($http) {
   var vm = this;
