@@ -1,7 +1,7 @@
 {
-  "name": "devBlog",
+  "name": "BrainChildDeveloper",
   "version": "1.0.0",
-  "description": "Personal api refactored to angular",
+  "description": "Personal api refactored to MEAN Stack blog",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.0",
