@@ -1,7 +1,7 @@
   PostsIndexController.$inject = ['$http'];
   function PostsIndexController ($http) {
     var vm = this;
-    vm.posts = {};
+    vm.posts = [];
 
     query();
 
