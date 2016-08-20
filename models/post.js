@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
     created: { type:Date, default: Date.now},
     title: String,
     content: String,
+    tags: [String],
     image: String,
     postLength: Number
   });
