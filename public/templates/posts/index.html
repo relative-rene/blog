@@ -1,105 +1,41 @@
 <div class="container">
-    <div class="row">
-        <div class="well">
-            <h1 class="text-center">Today's Blogposts</h1>
-            <div class="list-group">
-                <a href="#" class="list-group-item">
-                    <div class="media col-md-3">
-                        <figure class="pull-left">
-                            <i class="fa fa-cloud-upload blogicon"></i>
-                        </figure>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="list-group-item-heading">Blog Title</h4>
-                        <p class="list-group-item-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec sem molestie, tempor libero eu, placerat purus.
-                            Donec eget iaculis elit. Nam eget consectetur quam. Nam viverra ornare diam. In a ornare diam.
-                            Quisque vestibulum nulla nec facilisis malesuada.
-                            Proin at lobortis risus. Vivamus tristique eros vel cursus malesuada.
-                            Vivamus volutpat, sem nec venenatis iaculis, metus felis interdum mi, et venenatis felis mi at eros.
-                            Phasellus vel massa nisi. Fusce ut vehicula nunc. Nullam egestas eros risus, eu fringilla odio lacinia ac.
-                            Fusce placerat a dolor et tincidunt.
-                            Pellentesque tristique nunc et nibh scelerisque euismod.
-                            Sed tristique arcu sit amet nulla auctor ultricies.
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="ratetext">Rate it</div>
-                                <i class="fa fa-thumbs-o-up votes"></i><i class="fa fa-thumbs-o-down votes"></i>
-                                <div class="stars"></div>
-                                <h2>464  <small>Clicks</small></h2>
-                                <div id="rate1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="list-group-item">
-                    <div class="media col-md-3">
-                        <figure class="pull-left">
-                            <i class="fa fa-home blogicon"></i>
-                        </figure>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="list-group-item-heading">Blog Title</h4>
-                        <p class="list-group-item-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec sem molestie, tempor libero eu, placerat purus.
-                            Donec eget iaculis elit. Nam eget consectetur quam. Nam viverra ornare diam. In a ornare diam.
-                            Quisque vestibulum nulla nec facilisis malesuada.
-                            Proin at lobortis risus. Vivamus tristique eros vel cursus malesuada.
-                            Vivamus volutpat, sem nec venenatis iaculis, metus felis interdum mi, et venenatis felis mi at eros.
-                            Phasellus vel massa nisi. Fusce ut vehicula nunc. Nullam egestas eros risus, eu fringilla odio lacinia ac.
-                            Fusce placerat a dolor et tincidunt.
-                            Pellentesque tristique nunc et nibh scelerisque euismod.
-                            Sed tristique arcu sit amet nulla auctor ultricies.
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="ratetext">Rate it</div>
-                                <i class="fa fa-thumbs-o-up votes"></i><i class="fa fa-thumbs-o-down votes"></i>
-                                <div class="stars"></div>
-                                <h2>117  <small>Clicks</small></h2>
-                                <div id="rate2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                 <a href="#" class="list-group-item">
-                    <div class="media col-md-3">
-                        <figure class="pull-left">
-                            <i class="fa fa-location-arrow blogicon"></i>
-                        </figure>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="list-group-item-heading">Blog Title </h4>
-                        <p class="list-group-item-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec sem molestie, tempor libero eu, placerat purus.
-                            Donec eget iaculis elit. Nam eget consectetur quam. Nam viverra ornare diam. In a ornare diam.
-                            Quisque vestibulum nulla nec facilisis malesuada.
-                            Proin at lobortis risus. Vivamus tristique eros vel cursus malesuada.
-                            Vivamus volutpat, sem nec venenatis iaculis, metus felis interdum mi, et venenatis felis mi at eros.
-                            Phasellus vel massa nisi. Fusce ut vehicula nunc. Nullam egestas eros risus, eu fringilla odio lacinia ac.
-                            Fusce placerat a dolor et tincidunt.
-                            Pellentesque tristique nunc et nibh scelerisque euismod.
-                            Sed tristique arcu sit amet nulla auctor ultricies.
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="ratetext">Rate it</div>
-                                <i class="fa fa-thumbs-o-up votes"></i><i class="fa fa-thumbs-o-down votes"></i>
-                                <div class="stars"></div>
-                                <h2>709  <small>Clicks</small></h2>
-                                <div id="rate3"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+  <input type="text" class="form-control" ng-model="searchText" placeholder="Search Blogs">
+    <div ng-if="postsIndexCtrl.posts.length">
+      <div ng-repeat="post in postsIndexCtrl.posts | orderBy: 'date' | filter: searchText" class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class='row'>
+                <div class="col-md-3 col-xs-12 thumbnail">
+                  <img class="img-responsive" src="{{post.image}}" alt="post image">
+                  <a ng-href="/posts{{post._id}}"><span class="card-title">{{post.title}}</span></a>
+                </div>
+                <div class="col-md-9 col-xs-12">
+                  <ul class="list-group form-inline">
+                    <li class="list-group-item">
+                      <h4 class='inline-header'>Date:</h4>
+                      <span ng-hide="editing"><a ng-href="{{post._id}}">{{post.created}}</a></span>
+                      <input ng-show="editing" ng-model="post.created" type="text" class="form-control input-md">
+                    </li>
+                    <li class="list-group-item">
+                      <h4 class='inline-header'>{{post.tags}}</h4>
+                      <span ng-hide="editing">{{post.content}}</span>
+                      <input ng-show="editing" ng-model="post.content" type="text" class="form-control input-md">
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class='panel-footer'>
+                <div class='panel-footer'>
+                  <button class='btn btn-danger' ng-click="postsIndexCtrl.delete(post)">Delete Post</button>
+                  <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Post</button>
+                  <button class='btn btn-success' ng-show="editing" ng-click="postsIndexCtrl.edit(post); editing = false">Save Changes</button>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
