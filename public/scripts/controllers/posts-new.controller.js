@@ -1,18 +1,18 @@
-  PostsNewController.$inject = ["$location"];
-  function PostsNewController ($location,$http) {
+  PostsNewController.$inject = ["$http", "$location"];
+  function PostsNewController ($http, $location) {
     var vm = this;
-    vm.posts = {};
+      vm.post = {};
 
 //  app.get('/api/posts, controllers.posts.create);
-  create = function () {
+  vm.create = function() {
     $http({
-      method: 'POST',
-      url: '/api/posts/:id',
-      data: vm.Post,
-    }).then(function successCallback(response) {
-      vm.posts.push(response.data);
-    }, function errorCallback(response) {
-      console.log('There was an error posting the data', response);
+      method:'POST',
+      url: '/api/posts',
+      data: vm.post,
+    }).then(function onSuccess(res) {
+      vm.posts.push(res.data);
+    }, function errorCallback(res) {
+      console.log('There was an error creating', res);
     });
   };
 }

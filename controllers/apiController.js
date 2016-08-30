@@ -1,7 +1,7 @@
 function index(req, res) {
   res.json({
     message: "Welcome Brain Child Developer",
-    documentation_url: "https://github.com/relative-rene/express-personal-api",
+    documentation_url: "https://github.com/relative-rene/blog",
     base_url: "http://brainchilddeveloper.herokuapp.com/",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},

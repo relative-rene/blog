@@ -1,6 +1,7 @@
 console.log('js running');
+
 angular
-  .module('blog', ['ngRoute'])
+  .module('blog',['ngRoute'])
 
   //Posts CRUD controllers
   .controller('PostsIndexController', PostsIndexController)

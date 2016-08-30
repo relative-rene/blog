@@ -1,5 +1,8 @@
+postsIndexCtrl
 <div class="container">
+  <label class="explore center-align"><h3>Explore the Archives of a Dev</h3></label>
   <input type="text" class="form-control" ng-model="searchText" placeholder="Search Blogs">
+  <br>
     <div ng-if="postsIndexCtrl.posts.length">
       <div ng-repeat="post in postsIndexCtrl.posts | orderBy: 'date' | filter: searchText" class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -26,13 +29,13 @@
                   </ul>
                 </div>
               </div>
+                <!-- <div class='panel-footer'>
               <div class='panel-footer'>
-                <div class='panel-footer'>
                   <button class='btn btn-danger' ng-click="postsIndexCtrl.delete(post)">Delete Post</button>
                   <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Post</button>
                   <button class='btn btn-success' ng-show="editing" ng-click="postsIndexCtrl.edit(post); editing = false">Save Changes</button>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

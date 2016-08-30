@@ -1,21 +1,17 @@
-PostsIndexController.$inject = ['$http'];
-function PostsShowController ($http) {
+PostsShowController.$inject = ['$http','$routeParams'];
+function PostsShowController ($http, $routeParams) {
   var vm = this;
   vm.post = {};
 
 //  app.get('/api/posts/:Id', controllers.posts.show);
-  var id = $routeParams.id;
-  get();
-
-  vm.get = function (){
     $http({
-      method: 'SHOW',
-      url: '/api/posts',
-      data: vm.Post,
+      method: 'GET',
+      url: '/api/posts/' + $routeParams.id,
     }).then(function successCallback(res) {
-      vm.posts.push(res.data);
+      vm.post = res.data;
+      vm.tags = res.data.tags;
+      console.log(res.data);
     }, function errorCallback(res) {
-      console.log('There was an error posting ');
+      console.log('There was an error posting',res);
     });
-  };
 }

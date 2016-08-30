@@ -1,10 +1,9 @@
-  PostsEditController.$inject = ['$http'];
-  
-  function PostsEditController ($http) {
+  PostsEditController.$inject = ['$http', "$location"];
+  function PostsEditController ($http, $location) {
     var vm = this;
     vm.post = {};
 
-  edit = function (post) {
+  vm.edit = function (post) {
     $http({
       method: 'PUT',
       url: '/api/posts/'+post._id,
@@ -16,7 +15,7 @@
     });
   };
 
-  vm.deletePost = function (post) {
+  vm.delete = function (post) {
     $http({
       method: 'DELETE',
       url: '/api/posts/'+ post._id
@@ -27,5 +26,4 @@
       console.log('There was an error deleting the data', response);
     });
   };
-
 }

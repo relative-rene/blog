@@ -1,7 +1,7 @@
 <div class="parallax-background">
     <img src="images/Dark-Grey-Background-img.jpg" id="bg">
     <h1 class="centertext welcome">BrainChild Developer</h1>
-  <img class="summary-image img-circle img-responsive pull-right" src="images/faceBookPic.jpg" alt="Attractive Developer">
+  <img class="summary-image img-circle img-responsive pull-right" src="images/faceBookPic.jpg" alt="faceshot">
   <div class="summary">
     <div class="container">
         <h1 class="summary-heading">Origin<span class="text-muted"> The life and times of a dev</span>
@@ -10,7 +10,7 @@
           It is the mark of an educated mind to be able to entertain an idea and
           not accept it.<br>-Aristotle<br>
 
-            When I first heard of blogs, I thought it was a dairy for the internet
+            When I first heard of blogs, I thought it was a diary for the internet
           and okay with idea but it was certainly not for me.  Hindered by insecurity,
           I did not feel my opinions or experiences were worth sharing.  I have always
           admired the written word and I have personally loved and hated a person
@@ -26,4 +26,4 @@
         </p>
     </div>
   </div>
-</div>
+  <a ng-click="postsIndexCtrl.post.query();" ng-repeat="post in postsIndexCtrl.posts " class = "btn waves-effect waves-light blue left">Show Archive</a></div>
