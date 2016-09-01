@@ -84,3 +84,20 @@ a.list-group-item {
     border-left:10px solid transparent;
     border-right:10px solid transparent;
 }
+
+button {
+  border: 0;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease-out;
+  margin: 1em;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+button:active, button:hover {
+  outline: none;
+}

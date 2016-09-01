@@ -4,12 +4,6 @@ function config($routeProvider, $locationProvider) {
 // locationProvider allows us to use routes without hash params
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/main/index.html',
-      controllerAs: 'postsIndexCtrl',
-      controller: 'PostsIndexController'
-    })
-    // Routes to POST //
-    .when('/posts', {
       templateUrl: '/templates/posts/index.html',
       controllerAs: 'postsIndexCtrl',
       controller: 'PostsIndexController'
