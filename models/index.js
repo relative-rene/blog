@@ -1,8 +1,7 @@
 var mongoose = require("mongoose");
 mongoose.connect( process.env.MONGOLAB_URI ||
                   process.env.MONGOHQ_URL ||
-                  "mongodb://localhost/personal-api");
+                  "mongodb://localhost/blog");
 
-module.exports.Topic = require('./topic');
-module.exports.Event = require('./event');
+module.exports.Post = require('./post');
 // module.exports.Campsite =cd require("./campsite.js.example");

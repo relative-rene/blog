@@ -1,7 +1,7 @@
 {
-  "name": "devBlog",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "Personal api refactored to angular",
+  "description": "Personal api refactored to MEAN Stack blog",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/relative-rene/express_self_api.git"
+    "url": "git+https://github.com/relative-rene/blog.git"
   },
   "author": "relative-rene",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/relative-rene/express_self_api/issues"
+    "url": "https://github.com/relative-rene/blog/issues"
   },
-  "homepage": "https://github.com/relative-rene/express_self_api"
+  "homepage": "https://github.com/relative-rene/blog"
 }

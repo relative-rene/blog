@@ -1,6 +1,4 @@
-*/node_modules
-npm-debug.log
-.DS_Store
-bower_components
-**nodue_moudles
-/*.env
+**node_modules
+**npm-debug.log
+**.DS_Store
+**.env

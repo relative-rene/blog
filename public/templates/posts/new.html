@@ -1,0 +1,43 @@
+<br>
+  <h1> The Proving Ground </h1>
+<hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-offset-2">
+
+        <form class="form-horizontal" ng-submit="postsNewCtrl.create()">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-8 control-label">Title</label>
+              <div class="col-md-8">
+                <input id="title" class="form-control" ng-model="postsNewCtrl.post.title" type="text">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-8 control-label">Post</label>
+              <div class="col-md-8">
+                <textarea class="form-control" ng-model="postsNewCtrl.post.content"></textarea>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-8 control-label">Image</label>
+              <div class="col-md-8">
+                <input ng-model="postsNewCtrl.post.image" type="text" class="form-control">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-8 control-label">Save</label>
+              <div class="col-md-8">
+                <button class="btn btn-primary"> Commit Idea</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

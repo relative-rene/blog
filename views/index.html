@@ -8,53 +8,61 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="/vendor/angular/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
-    <!-- APPLICATION SCRIPTS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+
+        <!-- APPLICATION SCRIPTS -->
+    <script src="/scripts/controllers/posts-index.controller.js"></script>
+    <script src="/scripts/controllers/posts-new.controller.js"></script>
+    <script src="/scripts/controllers/posts-show.controller.js"></script>
+    <script src="/scripts/controllers/posts-edit.controller.js"></script>
+    <script src="/scripts/routes.js"></script>
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/TopicsIndexController.js"></script>
-    <script src="/scripts/controllers/TopicsShowController.js"></script>
-    <script src="/scripts/controllers/TopicsEventsShowController.js"></script>
-    <script src="/scripts/controllers/TopicsEventsIndexController.js"></script>
   </head>
   <body>
-    <img src="images/Dark-Grey-Background-img.jpg" id="bg">
-  <div class="heading">
-      <h1>A Brief Moment in Time</h1>
-      <p>All journeys have a begining this is mine</p>
-  </div>
-  <img class="summary-image img-circle img-responsive pull-right" src="images/faceBookPic.jpg" alt="Attractive Developer">
-  <div class="summary">
-    <div class="container">
-        <h1 class="summary-heading">Origin<span class="text-muted"> The life and times of a dev</span>
-        </h1>
-        <p class="lead">
-          It is the mark of an educated mind to be able to entertain an idea and
-          not accept it.<br>-Aristotle<br>
+    <main>
+      <div class="parallax-background">
+          <img src="images/Dark-Grey-Background-img.jpg" id="bg">
+          <h1 class="centertext welcome">BrainChild Developer</h1>
+        <img class="summary-image img-circle img-responsive pull-right" src="images/faceBookPic.jpg" alt="faceshot">
+        <div class="summary">
+          <div class="container">
+              <h1 class="summary-heading">Origin<span class="text-muted"> The life and times of a dev</span>
+              </h1>
+              <p class="lead">
+                It is the mark of an educated mind to be able to entertain an idea and
+                not accept it.<br>-Aristotle<br>
 
-            When I first heard of blogs, I thought it was a dairy for the internet
-          and okay with idea but it was certainly not for me.  Hindered by insecurity,
-          I did not feel my opinions or experiences were worth sharing.  I have always
-          admired the written word and I have personally loved and hated a person
-          for their expression of it.  Because I have grown from the brave and
-          generous people who share their experiences, today, I shed my fears and
-          take a step toward contributing to the internet that has taught me so much.
-          This will not be a grammatically/politically correct, nor is any effort
-          made to be inline with any controversial or accepted school of thought.
-          This blog started as a means to catalogue my growth as a Web Developer,
-          huMan and SF resident.  I hope you enjoy my perspective or get at least
-          get a better understanding on what you don’t like to read. I only garantee
-          honesty
-        </p>
-    </div>
-  </div>
-  <div ng-view></div>
-  <footer>
-    <p>Copyright &copy; relative-rene 2016</p>
-  </footer>
+                  When I first heard of blogs, I thought it was a diary for the internet
+                and okay with idea but it was certainly not for me.  Hindered by insecurity,
+                I did not feel my opinions or experiences were worth sharing.  I have always
+                admired the written word and I have personally loved and hated a person
+                for their expression of it.  Because I have grown from the brave and
+                generous people who share their experiences, today, I shed my fears and
+                take a step toward contributing to the internet that has taught me so much.
+                This will not be a grammatically/politically correct, nor is any effort
+                made to be inline with any controversial or accepted school of thought.
+                This blog started as a means to catalogue my growth as a Web Developer,
+                huMan and SF resident.  I hope you enjoy my perspective or get at least
+                get a better understanding on what you don’t like to read. I only garantee
+                honesty
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div ng-view></div>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; relative-rene 2016</p>
+    </footer>
+
 </body>
 </html>
