@@ -31,9 +31,9 @@
 
         <div class='panel-footer'> uncomment when edits need to happen
             <div class='panel-footer'>
-              <button class='btn btn-danger' ng-click="topicsIndexCtrl.deleteEvent(topic)">Delete Event</button>
+              <button class='btn btn-danger' ng-click="postsIndexCtrl.delete(post)">Delete Post</button>
               <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Event</button>
-              <button class='btn btn-success' ng-show="editing" ng-click="eventsIndexCtrl.editEvent(topic); editing = false">Save Changes</button>
+              <button class='btn btn-success' ng-show="editing" ng-click="postsIndexCtrl.edit(post); editing = false">Save Changes</button>
             </div>
           </div>
         </div>
