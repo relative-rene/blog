@@ -13,8 +13,6 @@
         <div ng-if="postsIndexCtrl.posts.length">
           <div ng-repeat="post in postsIndexCtrl.posts | orderBy: 'date' | filter: searchText" class="row">
             <div class="col-md-10 col-md-offset-1">
-              <div class="panel panel-default">
-                <div class="panel-body">
                   <div class='row'>
                     <div class="col-md-3 col-xs-12 thumbnail">
                       <img class="img-responsive" src="{{post.image}}" alt="post image">
@@ -43,8 +41,6 @@
                       <button class='btn btn-success' ng-show="editing" ng-click="postsIndexCtrl.edit(post); editing = false">Save Changes</button>
                     </div>
                   </div> -->
-                </div>
-              </div>
             </div>
           </div>
         </div>
